@@ -46,9 +46,10 @@ class MainWindow(QMainWindow):
         self.addTableWidget(novaConsulta)
         
         self.nome.clear()
-        self.email.clear()
         self.telefone.clear()
+        self.data_recebimento.clear()
         self.descricao.clear()
+        self.data_entrega.clear()
 
     def edit(self):
         lineSel = self.tabela.currentRow()
@@ -66,7 +67,7 @@ class MainWindow(QMainWindow):
         n_descricao = self.descricao.text()
         n_data_entrega= self.data_entrega.text()
 
-        edit = Consulta(id.text(), n_nome, n_telefone,
+        edit = Consulta(id, n_nome, n_telefone,
                         n_data_recebimento, n_descricao,n_data_entrega)
 
         self.edicao(edit)
@@ -111,10 +112,10 @@ class MainWindow(QMainWindow):
     def edicao(self, c: Editar):
         lineSel = self.tabela.currentRow()
         n_nome = QTableWidgetItem(c.nome)
-        n_email = QTableWidgetItem(c.telefone)
-        n_telefone = QTableWidgetItem(c.data_recebimento)
-        n_data = QTableWidgetItem(c.descricao)
-        n_estado = QTableWidgetItem(c.data_entrega)
+        n_telefone = QTableWidgetItem(c.telefone)
+        n_data_recebimento = QTableWidgetItem(c.data_recebimento)
+        n_descricao = QTableWidgetItem(c.descricao)
+        n_data_entrega = QTableWidgetItem(c.data_entrega)
 
 
         self.tabela.setItem(lineSel, 0, n_nome)

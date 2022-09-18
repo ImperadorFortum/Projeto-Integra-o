@@ -7,7 +7,7 @@ class ConsultaDAO():
     def add(c: Consulta):
         conn = connect()  # Cria a conexão
         cursor = conn.cursor()  # manipular o banco
-        SQL = "INSERT INTO Consultorias(nome,email,telefone,data,estado,descricao) VALUES (?,?,?,?,?);"
+        SQL = "INSERT INTO Consultorias(nome,telefone,data_recebimento,descricao,data_entrega) VALUES (?,?,?,?,?);"
         dados = [c.nome,c.telefone, c.data_recebimento, c.descricao, c.data_entrega]  # lista com os valores de entrada
         cursor.execute(SQL, dados)
         # pega o ID do último selecionado
@@ -22,7 +22,7 @@ class ConsultaDAO():
     def edit(c: Consulta):
         conn = connect()  # Cria a conexão
         cursor = conn.cursor()
-        SQL = "UPDATE Consultorias SET nome=?,email=?,telefone=?,data_recebimento=?,descricao=?,data_entrega=? WHERE id=?"
+        SQL = "UPDATE Consultorias SET nome=?,telefone=?,data_recebimento=?,descricao=?,data_entrega=? WHERE id=?"
         dados = [c.nome,c.telefone, c.data_recebimento,c.descricao,c.id,c.data_entrega] # lista com os valores de entrada
         cursor.execute(SQL, dados)
         conn.commit()  # salvar no banco

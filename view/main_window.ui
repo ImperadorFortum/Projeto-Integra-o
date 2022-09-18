@@ -65,7 +65,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="nome"/>
      </item>
      <item>
       <widget class="QLabel" name="label_3">
@@ -75,7 +75,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_2"/>
+      <widget class="QLineEdit" name="telefone"/>
      </item>
      <item>
       <widget class="QLabel" name="label_4">
@@ -85,7 +85,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QDateTimeEdit" name="dateTimeEdit"/>
+      <widget class="QDateTimeEdit" name="data_recebimento"/>
      </item>
     </layout>
    </widget>
@@ -101,6 +101,11 @@
     <column>
      <property name="text">
       <string>ID</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Nome</string>
      </property>
     </column>
     <column>
@@ -170,7 +175,7 @@
      <string>Data de Entrega</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="descricao">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -193,7 +198,7 @@
      <string>Descrição</string>
     </property>
    </widget>
-   <widget class="QDateTimeEdit" name="dateTimeEdit_2">
+   <widget class="QDateTimeEdit" name="data_entrega">
     <property name="geometry">
      <rect>
       <x>10</x>

@@ -1,6 +1,6 @@
 import sqlite3
 
-FILE_DB = '/database/consultoria.db'
+FILE_DB = './database/consultoria.db'
 
 
 def connect():
