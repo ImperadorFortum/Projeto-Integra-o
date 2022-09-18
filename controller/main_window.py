@@ -30,6 +30,7 @@ class MainWindow(QMainWindow):
             self.addTableWidget(c)
 
     def add(self):
+        id = self.id.text()     
         nome = self.nome.text()
         telefone = self.telefone.text()
         data_recebimento = self.data_recebimento.text()
